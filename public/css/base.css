@@ -1,108 +1,144 @@
 body {
-                        background: 
-                        linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
-                        linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
-                        linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
-                        linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
-                        linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
-                        linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
-                        background-color: #131313;
-                        no-repeat center center fixed;
-                        -webkit-background-size: cover;
-                        -moz-background-size: cover;
-                        -o-background-size: cover;
-                        background-size: cover;
-                        font-family: 'Roboto', sans-serif;
-                    }
+    background: 
+    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-color: #131313;
+    no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+}
 
-        .login-card {
-            padding: 40px;
-            width: 300px;
-            background-color: transparent;
-            margin-left: 486px;
-            margin-top: 112px;
-            overflow: hidden;
-            position: absolute;
-            border: 2px double #6AFB92;
-            border-radius:95px;
-        }
+.login-card {
+    padding: 40px;
+    width: 300px;
+    background-color: transparent;
+    margin-left: 486px;
+    margin-top: 112px;
+    overflow: hidden;
+    position: absolute;
+    border: 2px double #6AFB92;
+    border-radius:95px;
+}
 
-        .login-card:hover{
-            border: 5px solid #6AFB92;
-        }
+.login-card:hover{
+    border: 5px solid #6AFB92;
+}
 
-        .login-card h1 {
-            font-weight: 500;
-            text-align: center;
-            font-size: 40px;
-            color: #6AFB92;
-        }
+.login-card h1 {
+    font-weight: 500;
+    text-align: center;
+    font-size: 40px;
+    color: #6AFB92;
+}
 
-        .login-card input[type=submit] {
-            width: 100%;
-            display: compact;
-            margin-bottom: 10px;
-            position: relative;
-            border-radius: 15px;
-        }
+.login-card input[type=submit] {
+    width: 100%;
+    display: compact;
+    margin-bottom: 10px;
+    position: relative;
+    border-radius: 15px;
+}
 
-        .login-card input[type=text], input[type=password] {
-            height: 44px;
-            font-size: 18px;
-            width: 100%;
-            margin-bottom: 10px;
-            background: transparent;
-            border: transparent;
-            padding: 0 8px;
-            box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            color: white;
-        }
+.login-card input[type=text], input[type=password] {
+    height: 44px;
+    font-size: 18px;
+    width: 100%;
+    margin-bottom: 10px;
+    background: transparent;
+    border: transparent;
+    padding: 0 8px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    color: white;
+}
 
-        .login-card input[type=text]:hover, input[type=password]:hover {
-            border: 2px solid #6AFB92;
-        }
+.login-card input[type=text]:hover, input[type=password]:hover {
+    border: 2px solid #6AFB92;
+}
 
-        .login {
-            text-align: center;
-            font-size: 14px;
-            font-family: 'Lato', 'Lato', sans-serif;
-            font-weight: 700;
-            height: 36px;
-            padding: 0 8px;
-        }
+.login {
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Lato', 'Lato', sans-serif;
+    font-weight: 700;
+    height: 36px;
+    padding: 0 8px;
+}
 
-        .login-submit {
-            border: 0;
-            color: #fff;
-            text-shadow: 0 1px rgba(0,0,0,0.1);
-            background-color: grey;
-        }
+.login-submit {
+    border: 0;
+    color: #fff;
+    text-shadow: 0 1px rgba(0,0,0,0.1);
+    background-color: grey;
+}
 
-        .login-submit:hover {
-            border: 0;
-            text-shadow: 0 1px rgba(0,0,0,0.3);
-            background-color: darkred;
-        }
+.login-submit:hover {
+    border: 0;
+    text-shadow: 0 1px rgba(0,0,0,0.3);
+    background-color: darkred;
+}
 
-        .login-card a {
-            text-decoration: none;
-            color: #666;
-            font-weight: 400;
-            text-align: center;
-            display: inline-block;
-            opacity: 0.6;
-            transition: opacity ease 0.5s;
-        }
+.login-card a {
+    text-decoration: none;
+    color: #666;
+    font-weight: 400;
+    text-align: center;
+    display: inline-block;
+    opacity: 0.6;
+    transition: opacity ease 0.5s;
+}
 
-        .login-card a:hover {
-            opacity: 1;
-        }
-        .errors{
-                background: slategrey;
-                color: #fff;
-                padding: 20px;
-                margin-bottom: 20px;
-                border-radius:95px;
-                text-align: center
-            }
+.login-card a:hover {
+    opacity: 1;
+}
+.errors{
+        background: slategrey;
+        color: #fff;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius:95px;
+        text-align: center
+    }
+
+.messages{
+    background: slategrey;
+    color: #fff;
+    top:5px;
+    right:5px;
+    padding: 8px;
+    padding-bottom: 2px;
+    border-radius:85px;
+    border: 0px;
+    text-align: center;
+}
+
+ .logout-button
+{
+position:fixed;
+top:5px;
+right:5px;
+padding: 8px;
+padding-bottom: 2px;
+border-radius:85px;
+border: 0px;
+color: #fff;
+text-shadow: 0 px rgba(0,0,0,0.1);
+background-color: grey;
+}
+.logout-button:hover
+{
+    background-color: #7D2B2D; 
+}
+
+
+#errmsg
+{
+color: red;
+}

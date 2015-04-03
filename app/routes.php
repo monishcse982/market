@@ -18,8 +18,13 @@ Route::get('admins',function(){
 });
 
 Route::any('users_login',array(
+		'as' => 'login',
+		'uses' => 'AdminsController@login'
+	));
+
+Route::any('admins_login',array(
 		'as' => 'ulogin',
-		'uses' => 'UsersController@ulogin'
+		'uses' => 'AdminsController@login'
 	));
 
 Route::any('add',function(){
