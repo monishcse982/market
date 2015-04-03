@@ -1,0 +1,166 @@
+             body {
+                        background: 
+                        linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+                        linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+                        linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+                        linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+                        linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+                        linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+                        background-color: #131313;
+                        no-repeat center center fixed;
+                        -webkit-background-size: cover;
+                        -moz-background-size: cover;
+                        -o-background-size: cover;
+                        background-size: cover;
+                        font-family: 'Roboto', sans-serif;
+                    }
+
+            .master-card {
+                    padding-top: 50px;
+                    padding-bottom: 50px;
+                    padding-right: 50px;
+                    padding-left: 50px;
+                    width:auto;
+                    height:auto;
+                    background-color: transparent;
+                    margin: 60px;
+                    overflow: hidden;
+                    position: relative;
+                    border: 2px double #6AFB92;
+                    border-radius:95px;
+                }
+             .logout-button
+                    {
+                    position:fixed;
+                    top:5px;
+                    right:5px;
+                    padding: 8px;
+                    padding-bottom: 2px;
+                    border-radius:85px;
+                    border: 0px;
+                    color: #fff;
+                    text-shadow: 0 px rgba(0,0,0,0.1);
+                    background-color: grey;
+                    }
+            .logout-button:hover
+            {
+                background-color: #7D2B2D; 
+            }
+
+            .input-card
+                {
+                padding: 2px;
+                right: 2%;
+                left: 10%;
+                width: 85%;
+                height: inherit;
+                background-color: transparent;
+                overflow: hidden;
+                position: relative;
+            }
+
+            .prod-text-card
+            {
+                padding: 5px;
+                padding-bottom: 2px;
+                right: 95%;
+                left: 5%;
+                height: 55px;
+                background-color: transparent;
+                overflow: hidden;
+                position: relative;
+                border: 2px dashed #DC716B;
+                border-radius:95px;
+                background: transparent;
+                padding: 0 8px;
+                box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                text-decoration: none;
+                color: white;
+                font-weight: bolder;
+                font-size: 18px;
+                text-align: center;
+            }
+
+            .prod-text-card:hover
+            {
+                border: 2px solid #7D2B2D;
+            }
+
+            .qty-text-card
+            {
+                padding: 5px;
+                padding-bottom: 2px;
+                right: 95%;
+                left: 5%;
+                height: 55px;
+                background-color: transparent;
+                overflow: hidden;
+                position: relative;
+                border: 2px dashed #DC716B;
+                border-radius:95px;
+                background: transparent;
+                padding: 0 8px;
+                box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                text-decoration: none;
+                color: white;
+                font-weight: bolder;
+                font-size: 18px;
+                text-align: center;
+            }
+
+            .qty-text-card:hover
+            {
+                border: 2px solid #7D2B2D;
+            }
+
+            .label
+            {
+                padding: 5px;
+                padding-bottom: 2px;
+                right: 95%;
+                left: 5%;
+                height: 55px;
+                background-color: transparent;
+                overflow: hidden;
+                position: relative;
+                background: transparent;
+                padding: 0 8px;
+                box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                text-decoration: none;
+                color: white;
+                font-weight: bolder;
+                font-size: 18px;
+                text-align: center;
+            }
+
+            .button-card
+            {
+                padding: 5px;
+                padding-bottom: 2px;
+                right: 95%;
+                left: 5%;
+                height: 55px;
+                border: 0;
+                overflow: hidden;
+                position: relative;
+                border-radius:85px;
+                color: #fff;
+                text-shadow: 0 1px rgba(0,0,0,0.1);
+                background-color: grey;
+            }
+
+            .button-card:hover
+            {
+                background-color: #7D2B2D; 
+            }
+            .errors{
+                    background: slategrey;
+                    color: #fff;
+                    padding: 20px;
+                    margin-bottom: 20px;
+                    border-radius:95px;
+                    text-align: center;
+                }
