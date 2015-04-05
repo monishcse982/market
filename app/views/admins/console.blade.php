@@ -24,6 +24,10 @@
             <a href="http://localhost:8000/dep"><h1><pre>DEPRECATE<br> OR REVOKE<br>PRODUCT</pre></h1></a>
             </div>
 
+            <div class="control-card generateReport" id="generateReport">
+            <a href="http://localhost:8000/genChart"><h1><pre>GENERATE <br> CHART</pre></h1></a>
+            </div>
+
         </div>
         <a class="logout-button" href="http://localhost:8000">LOGOUT</a>
     </body>

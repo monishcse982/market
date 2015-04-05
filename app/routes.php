@@ -62,3 +62,12 @@ Route::any('revoke',array(
 Route::any('dep',function(){
 		return View::make('admins.deprecate');
 	});
+
+Route::any('genChart', function(){
+	return View::make('admins.chartGenerationTool');
+});
+
+Route::any('generate',array(
+		'as' => 'getChart',
+		'uses' => 'AdminsController@getChart'
+	    ));

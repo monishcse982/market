@@ -68,19 +68,25 @@ background-color: grey;
     background-color: #E5E4E2;
     left: 32px;
     top: 269px;
-    -webkit-transform: translate3d(250px, -90px, 0px);
+    -webkit-transform: translate3d(250px, -45px, 0px);
 }
 
 .restockProduct {
     border-color: #F75E59;
     background-color: #E5E4E2;
-    -webkit-transform: translate3d(789px, -320px, 0px);
+    -webkit-transform: translate3d(789px, -300px, 0px);
 }
 
 .depRevokeProduct {
     border-color: #9E7BFF;
     background-color: #E5E4E2;
-    -webkit-transform: translate3d(518px, -360px, 0px);
+    -webkit-transform: translate3d(518px, -325px, 0px);
+}
+
+.generateReport {
+    border-color: #FFC0CB;
+    background-color: #E5E4E2;
+    -webkit-transform: translate3d(518px, -800px, 0px);
 }
 
 .updateProduct {

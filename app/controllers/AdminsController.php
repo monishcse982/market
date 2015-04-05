@@ -306,6 +306,28 @@ class AdminsController extends \BaseController {
 		return View::make('admins.edit');
 	}
 
+
+	/**
+	* To generate the chart witht he given data
+	*source route /genChart
+	*/
+	public function getChart()
+	{
+		$productID = Input::get('productID');
+		$timePeriod = Input::get('timePeriod');
+		$currentYear = idate("Y");
+		$salesValues = array();
+		//SELECT SUM(UnitPrice) FROM order details WHERE OrderID = (SELECT OrderID FROM Order WHERE (YEAR(OrderDate) <= CurrentYear))
+		while ( $timePeriod>=0) {
+			$yearSale = DB::select('select SUM(UnitPrice) FROM orderdetails WHERE (OrderYear = :year) AND (ProductID = :product)', ['product' => $productID,'year' => $currentYear-$timePeriod]);
+			$temp = ((array)$yearSale[0]);
+			array_push($salesValues, $temp['SUM(UnitPrice)']);
+			$timePeriod = $timePeriod - 1;
+		}
+		return View::make('admins.chart')->with('sales',$salesValues);
+	}
+
+
 	/**
 	 * Update the specified resource in storage.
 	 * PUT /admins/{id}
