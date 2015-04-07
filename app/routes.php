@@ -67,7 +67,11 @@ Route::any('genChart', function(){
 	return View::make('admins.chartGenerationTool');
 });
 
-Route::any('generate',array(
-		'as' => 'getChart',
-		'uses' => 'AdminsController@getChart'
+Route::any('generate', array(
+		'as' => 'generateChart',
+		'uses' => 'AdminsController@generateChart'
 	    ));
+
+Route::any('chart', function(){
+	return View::make('admins.chart');
+});

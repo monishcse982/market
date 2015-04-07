@@ -215,7 +215,6 @@ class AdminsController extends \BaseController {
 			$messages = "";
 			if (Hash::check($password, $db_password) != 1)
 			{
-				Log::info("LogIN status");
 				Log::info(Hash::check($password, $db_password));
 				$messages = 'Incorrect User ID or Password, please Check your credentials';
 				return View::make('admins.index')->with('user','ADMIN');
@@ -280,6 +279,25 @@ class AdminsController extends \BaseController {
 		//
 	}
 
+
+	public function generateChart()
+	{
+		$productID = Input::get('productID');
+		$timePeriod = Input::get('timePeriod');
+		$currentYear = idate("Y");
+		$salesValues = array();
+		//SELECT SUM(UnitPrice) FROM order details WHERE OrderID = (SELECT OrderID FROM Order WHERE (YEAR(OrderDate) <= CurrentYear))
+		while ( $timePeriod>=0) {
+			$yearSale = DB::select('select SUM(UnitPrice) FROM orderdetails WHERE (OrderYear = :year) AND (ProductID = :product)', ['product' => $productID,'year' => $currentYear-$timePeriod]);
+			$temp = ((array)$yearSale[0]);
+			array_push($salesValues, $temp['SUM(UnitPrice)']);
+			$timePeriod = $timePeriod - 1;
+		}
+		$productName = array();
+		array_push($productName,DB::table('products')->where('productID', $productID)->pluck('ProductName'));
+		return View::make('admins.chart')->with('sales',$salesValues)->with('productName', $productName);
+	}
+
 	/**
 	 * Display the specified resource.
 	 * GET /admins/{id}
@@ -305,28 +323,6 @@ class AdminsController extends \BaseController {
 		$admin = ADMIN::find($id);
 		return View::make('admins.edit');
 	}
-
-
-	/**
-	* To generate the chart witht he given data
-	*source route /genChart
-	*/
-	public function getChart()
-	{
-		$productID = Input::get('productID');
-		$timePeriod = Input::get('timePeriod');
-		$currentYear = idate("Y");
-		$salesValues = array();
-		//SELECT SUM(UnitPrice) FROM order details WHERE OrderID = (SELECT OrderID FROM Order WHERE (YEAR(OrderDate) <= CurrentYear))
-		while ( $timePeriod>=0) {
-			$yearSale = DB::select('select SUM(UnitPrice) FROM orderdetails WHERE (OrderYear = :year) AND (ProductID = :product)', ['product' => $productID,'year' => $currentYear-$timePeriod]);
-			$temp = ((array)$yearSale[0]);
-			array_push($salesValues, $temp['SUM(UnitPrice)']);
-			$timePeriod = $timePeriod - 1;
-		}
-		return View::make('admins.chart')->with('sales',$salesValues);
-	}
-
 
 	/**
 	 * Update the specified resource in storage.

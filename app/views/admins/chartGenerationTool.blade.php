@@ -13,12 +13,24 @@
                                 {{Session::get('messages')}}
                            </div>
                 @endif
-    	 <div class="login-card">
+    	  {{Form::open(array('url' => 'generate', 'class' => 'login-card','method' => 'PUT', 'name' => 'generateCharte')) }}
+
+                {{ Form::text('productID',Input::old('productID'),array('placeholder'=>'productID')) }}
+                {{ Form::text('timePeriod',Input::old('timePeriod'),array('placeholder' => 'timePeriod')) }}
+
+                {{Form::submit('SUBMIT',array('class' => 'login login-submit'))}}
+            {{Form::close()}}
+    	<a class="logout-button" href="http://localhost:8000"> LOGOUT </a>
+    </body>
+</html>
+
+
+
+<!--
+<div class="login-card">
                      <input type="text" id="productID" placeholder="productID">
                      <input type="text" id ='timePeriod' placeholder='timePeriod'>
                      <span id="errmsg"></span>
                      <input type="submit" value="GENERATE" id="generateChart" class='login login-submit'>
              </div>
-    	<a class="logout-button" href="http://localhost:8000"> LOGOUT </a>
-    </body>
-</html>
+!>

@@ -32,31 +32,25 @@ $(document).ready(function() {
                                         url: "http://localhost:8000/removeUser",
                                         data: {"username":$("#empName").val()},
                                         content_type: "application/json; charset=UTF-8"
-                                });                               
-                                location.reload();
+                                });                    
                                 });
                 }
         });
 
 
-        $("#generateChart").click(function() {
+        $("#productID").on('input',function() {
                 if (letters.test($("#productID").val()))
                 {
-                        $("#errmsg").html("productID must contain only integers").show().fadeOut("slow");
+                        alert("productID should only be an integer");
+                        $('#productID').val("");
                 } 
+        });
+
+        $("#timePeriod").on('input',function() {
                 if (letters.test($("#timePeriod").val()))
                 {
-                        $("#errmsg").html("Time Period must contain only integers").show().fadeOut("slow");
-                }
-                else
-                {
-                        $.ajax({
-                                type: "POST",
-                                url: "http://localhost:8000/generate",
-                                data: {"productID":$("#productID").val(), "timePeriod":$("#timePeriod").val()},
-                                content_type: "application/json; charset=UTF-8"
-                        });
-                        location.reload();
-                }
-        });        
+                        alert("timePeriod should only be an integer");
+                        $('#timePeriod').val("");
+                } 
+        });
 });
